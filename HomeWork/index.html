@@ -1,0 +1,22 @@
+<html xml:lang="ru" lang="ru">
+	<head>
+		<title>Geometric fractal</title>
+		<script src="script.js"></script>
+		<script src="fractalAlgorithm.js"></script>
+	</head>
+	<body onload="onLoad()">
+		<div align="center">
+		<canvas id="mainCanvas" align="center" width="1000" height="500"></canvas>
+		</div></br>
+		<div width="20">
+			<output>Iterations count: </output><input type="number" min="0" max="6" id="iterations" value="0" onchange="onIterationsChange()"></br>
+			<output>Stroke width: </output><input type="number" min="1" max="100" id="strokeWidth" value="0" onchange="onStrokeChange()"></br>
+			<output>Fractal color: </output><input type="color" id="fractColor" onchange="onColorChange()"></br>
+			<output>Background color: </output><input type="color" id="backColor" value="#ffffff" onchange="onBackgroundChanger()"></br>
+			<output>FillStyle: </output><input type="radio" checked name="strokeStyle" id="radioStroke" value="stroke" onchange="onRadioFillChange(this)">Stroke
+			<input value="fill" type="radio" name="strokeStyle" id="radioFill" onchange="onRadioFillChange(this)">Fill</br>
+			<input value="Reset" type="button" id="reset" onclick="resetFields()">
+			Redactor <input value="On" type="button" id="createMode" onclick="redactor()"></br>
+		</div>
+	</body>
+</html>
